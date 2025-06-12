@@ -29,9 +29,9 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ videoId, videoTitle }) =>
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  useEffect(() => {
-    scrollToBottom();
-  }, [messages]);
+  // useEffect(() => {
+  //   scrollToBottom();
+  // }, [messages]);
 
   const handleSendMessage = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -130,7 +130,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ videoId, videoTitle }) =>
               <div className="flex justify-start">
                 <div className="max-w-[80%] rounded-lg p-3 bg-neutral-100 text-neutral-800 flex items-center space-x-2">
                   <Loader2 size={20} className="animate-spin" />
-                  <p className="text-sm">Đang nhập...</p>
+                  <p className="text-sm">...</p>
                 </div>
               </div>
             )}
